@@ -14,7 +14,7 @@
     </head>
     <body>
       <!--nav bar  -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" hidden>
+      <nav id='main-nav' class="navbar navbar-expand-lg navbar-light bg-light" hidden>
         <a class="navbar-brand" href="#"><i class="fas fa-globe-americas"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
               <a class="nav-link" href="#">Pricing</a>
             </li>
           </ul>
-        <div class="alert alert-secondary" role="alert">
+        <div id="alert" class="alert alert-secondary" role="alert">
           Test Alert
         </div>
     <span class="navbar-text">
@@ -69,16 +69,16 @@
         </button>
       </div>
       <div class="modal-body" id="#register-modal">
-        <form>
+        <form id="regisForm">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              <input name="credentials[email]" type="email" class="form-control" id="inputEmail4" placeholder="Email">
             </div>
             <div class="form-group col-md-6">
               <label for="inputPassword4">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-              <input type="password_confirmation" class="form-control" id="inputPassword4" placeholder="Confirm Password">
+              <input Name="credentials[password]" type="password" class="form-control" id="inputPassword" placeholder="Password"></input>
+              <input Name="credentials[password_confirmation]" type="password" class="form-control" id="inputPasswordConfirmation" placeholder="Confirm Password"></input>
             </div>
           </div>
           <div class="form-group">
@@ -160,8 +160,8 @@
           <div class="form-group">
             <div class="form-check">
           </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
-          </div
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
           </form>
       </div>
       <div class="modal-footer">
@@ -183,13 +183,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
-          <input type="text" placeholder="Enter E-mail">
-          <input type="password" placeholder="Enter Password">
+        <form id="signInForm">
+          <input Name="credentials[email]" type="text" placeholder="Enter E-mail">
+          <input Name="credentials[password]" type="password" placeholder="Enter Password">
           <button type="submit" class="btn btn-primary">Sign-In</button>
         </form>
       </div>
       <div class="modal-footer">
+        <p id="signin-success"></p>
         Version 1.0
       </div>
     </div>
