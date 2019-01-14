@@ -27,8 +27,29 @@ const signOut = () => {
   })
 }
 
+const pwChange = data => {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const maintTix = data => {
+  return $.ajax({
+    url: config.apiUrl + '/newticket',
+    method: 'POST',
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
-  signOut
+  signOut,
+  pwChange,
+  maintTix
 }

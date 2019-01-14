@@ -59,11 +59,24 @@ const signOutFailure = (error) => {
   console.log('signOutFailure ran. Error is :', error)
 }
 
+// pw change success and failures
+const pwChgSuccess = data => {
+  console.log('pw change success')
+  $('#pwChg-success').text('You have successfully changed your password.')
+}
+
+const pwChgFailure = error => {
+  console.log('pw change failure', error)
+  $('#pwChg-success').text('You are unable to change your password. Please contact Administrator.')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  pwChgSuccess,
+  pwChgFailure
 }

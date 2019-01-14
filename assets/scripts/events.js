@@ -25,8 +25,26 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const onPwChange = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.pwChange(data)
+    .then(ui.pwChgSuccess)
+    .catch(ui.pwChgFailure)
+}
+
+const onSendMaintTix = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.maintTix(data)
+    .then(ui.maintTixSuccess)
+    .catch(ui.maintTixFailure)
+}
+
 module.exports = {
   onRegister,
   onSignIn,
-  onSignOut
+  onSignOut,
+  onPwChange,
+  onSendMaintTix
 }

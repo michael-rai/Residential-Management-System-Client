@@ -10,4 +10,6 @@ $(() => {
   $('#regisForm').on('submit', events.onRegister)
   $('#signInForm').on('submit', events.onSignIn)
   $('#logout').on('click', events.onSignOut)
+  $('#pwChgForm').on('submit', events.onPwChange)
+  $('#sendMaintTix').on('submit', events.onSendMaintTix)
 })
