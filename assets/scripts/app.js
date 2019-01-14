@@ -9,4 +9,5 @@ const events = require('./events.js')
 $(() => {
   $('#regisForm').on('submit', events.onRegister)
   $('#signInForm').on('submit', events.onSignIn)
+  $('#logout').on('click', events.onSignOut)
 })
