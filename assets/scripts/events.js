@@ -41,10 +41,18 @@ const onSendMaintTix = event => {
     .catch(ui.maintTixFailure)
 }
 
+const onViewMaintTix = event => {
+  event.preventDefault()
+  api.viewMaintTix()
+    .then(ui.viewMaintTixSuccess)
+    .catch(ui.viewMaintTixFailure)
+}
+
 module.exports = {
   onRegister,
   onSignIn,
   onSignOut,
   onPwChange,
-  onSendMaintTix
+  onSendMaintTix,
+  onViewMaintTix
 }

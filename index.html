@@ -29,7 +29,7 @@
               <a class="nav-link" href="#" data-toggle="modal" data-target="#changePwModal">Change Password</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="modal" data-target="#viewTixModal">View Maintenance Tickets</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#viewTixModal" id="viewMainTix">View Maintenance Tickets</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="logout"><em>Sign-out</em></a>
@@ -348,6 +348,15 @@
         </button>
       </div>
       <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">Tickets</div>
+            <div class="col">Resolved?</div>
+            <div class="w-100"></div>
+            <div class="col" id="ticketIndexResponse"></div>
+            <div class="col" id="ticketResolvedResponse"></div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

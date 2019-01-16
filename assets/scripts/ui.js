@@ -70,6 +70,16 @@ const pwChgFailure = error => {
   $('#pwChg-success').text('You are unable to change your password. Please contact Administrator.')
 }
 
+// view maintenance tix success and failures
+const viewMaintTixSuccess = data => {
+  console.log(data.tickets)
+}
+
+// const viewMaintTixFailure = data => {
+//   console.log('pw change success')
+//   $('#pwChg-success').text('You have successfully changed your password.')
+// }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -78,5 +88,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   pwChgSuccess,
-  pwChgFailure
+  pwChgFailure,
+  viewMaintTixSuccess
 }

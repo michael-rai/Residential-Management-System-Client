@@ -12,4 +12,5 @@ $(() => {
   $('#logout').on('click', events.onSignOut)
   $('#pwChgForm').on('submit', events.onPwChange)
   $('#sendMaintTix').on('submit', events.onSendMaintTix)
+  $('#viewMainTix').on('click', events.onViewMaintTix)
 })
