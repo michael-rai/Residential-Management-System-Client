@@ -13,7 +13,7 @@ $(() => {
   $('#pwChgForm').on('submit', events.onPwChange)
   $('#sendMaintTix').on('submit', events.onSendMaintTix)
   $('#viewMainTix').on('click', events.onViewMaintTix)
-  // $('#showTix').on('click', events.onShowMaintTix)
+  $('#sendMsgToMgmt').on('submit', events.onMsgToMgmt)
   $('#delTixFormSearch').on('submit', events.onDelSearch)
   $('#showEditTixForm').on('submit', events.onShowEdit)
   $('#searchResults').on('submit', events.onEdit)

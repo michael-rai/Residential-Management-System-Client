@@ -82,6 +82,15 @@ const onShowEdit = event => {
     .catch(ui.showEditFailure)
 }
 
+const onMsgToMgmt = event => {
+  event.preventDefault()
+  document.getElementById('msgToMgmtContainer').hidden = true
+  document.getElementById('cancelBtnHide').hidden = true
+  document.getElementById('sendBtnHide').hidden = true
+  document.getElementById('closeBtnShow').hidden = false
+  $('#msgConfirmation').text('Your message has been sent to the fictional property managment for review.')
+}
+
 module.exports = {
   onRegister,
   onSignIn,
@@ -92,5 +101,6 @@ module.exports = {
   onShowMaintTix,
   onEdit,
   onDelSearch,
-  onShowEdit
+  onShowEdit,
+  onMsgToMgmt
 }
