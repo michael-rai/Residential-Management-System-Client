@@ -51,7 +51,7 @@ const onViewMaintTix = event => {
 
 const onShowMaintTix = event => {
   event.preventDefault()
-  document.getElementById('ticketShowContainer').hidden = false
+  // document.getElementById('ticketShowContainer').hidden = false
   api.showMaintTix()
     .then(ui.showMaintTixSuccess)
     .catch(ui.showMaintTixFailure)
@@ -59,10 +59,26 @@ const onShowMaintTix = event => {
 
 const onDelMaintTix = event => {
   event.preventDefault()
-  document.getElementById('ticketDeleteContainer').hidden = false
   api.delMaintTix()
     .then(ui.delMaintTixSuccess)
     .catch(ui.delMaintTixFailure)
+}
+
+const onDelSearch = event => {
+  event.preventDefault()
+  document.getElementById('delSearchContainer').hidden = false
+  api.delMaintTix()
+    .then(ui.delMaintTixSuccess)
+    .catch(ui.delMaintTixFailure)
+}
+
+const onShowEdit = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.showEdit(data)
+    .then(ui.showEditSuccess)
+    .catch(ui.showEditFailure)
 }
 
 module.exports = {
@@ -73,5 +89,7 @@ module.exports = {
   onSendMaintTix,
   onViewMaintTix,
   onShowMaintTix,
-  onDelMaintTix
+  onDelMaintTix,
+  onDelSearch,
+  onShowEdit
 }

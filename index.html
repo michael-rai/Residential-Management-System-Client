@@ -52,7 +52,7 @@
 <!-- Jumbotron -->
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Welcome To the Residential Management System</h1>
+          <h1 class="display-4">Welcome to The Residential Management System</h1>
           <p id="prelogMsg"class="lead">Once logged in, as a member of your residential community, you can submit maintence tickets and make payments.</p>
           <div id="regSignButtons"class='position-relative'>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#regModal">
@@ -384,9 +384,31 @@
       </div>
       <div class="modal-body">
         <p> Search a previous maintenance request and edit it</p>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline" id="showEditTixForm">
+          Enter ID #: <input Name="id" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <form id="searchResults" hidden>
+          <div class="modal-body form-group">
+            <input name="subject" type="text" placeholder="subject">
+          <textarea id="maintMessage2" name="description" class="form-control" placeholder="Enter a detailed description of the issue. If possible, upload a photo. Please allow 1 business day for a response." rows="4" required="required" data-error="Please, leave us a message."></textarea>
+
+              <div class="col-md-6">
+                <!-- <div class="form-group"> -->
+                  <!-- <div class="input-group"> -->
+                    <!-- <span class="input-group-btn"> -->
+                      <span class="btn btn-default btn-file">
+                          Browse… <input type="file" id="imgInp2">
+                        </span>
+                      <!-- </span> -->
+                      <!-- <input type="text" readonly> -->
+                    <!-- </div> -->
+                    <img id='img-upload2'/>
+                  <!-- </div> -->
+                </div>
+          </div>
+
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Edit</button>
         </form>
       </div>
       <div class="modal-footer">
@@ -408,11 +430,11 @@
       </div>
       <div class="modal-body">
         <p> Search a previous maintenance request and delete it</p>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline" id="delTixFormSearch">
+          <input  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
           </form>
-        <div class="container" id="ticketIndexContainer">
+        <div class="container" id="delSearchContainer" hidden>
           delete a ticket test
         </div>
       </div>

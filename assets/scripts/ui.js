@@ -102,6 +102,16 @@ const delMaintTixFailure = data => {
   console.log('got to del maint failure')
 }
 
+// show edit success and failures
+const showEditSuccess = data => {
+  document.getElementById('searchResults').hidden = false
+  console.log(data)
+}
+
+const showEditFailure = error => {
+  console.log(error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -115,5 +125,7 @@ module.exports = {
   showMaintTixSucess,
   showMaintTixFailure,
   delMaintTixSucess,
-  delMaintTixFailure
+  delMaintTixFailure,
+  showEditSuccess,
+  showEditFailure
 }
