@@ -43,7 +43,7 @@ const onSendMaintTix = event => {
 
 const onViewMaintTix = event => {
   event.preventDefault()
-  // document.getElementById('ticketIndexContainer').hidden = false
+  document.getElementById('ticketIndexContainer').hidden = false
   api.viewMaintTix()
     .then(ui.viewMaintTixSuccess)
     .catch(ui.viewMaintTixFailure)
