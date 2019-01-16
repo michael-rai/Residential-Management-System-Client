@@ -78,6 +78,14 @@ const delMaintTix = data => {
   })
 }
 
+const edit = data => {
+  return $.ajax({
+    url: config.apiUrl + `/tickets/${data.id}`,
+    method: 'PATCH',
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -87,5 +95,6 @@ module.exports = {
   maintTix,
   showMaintTix,
   showEdit,
-  delMaintTix
+  delMaintTix,
+  edit
 }

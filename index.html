@@ -388,9 +388,10 @@
           Enter ID #: <input Name="id" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
         </form>
+        <p id="searchMsg"></p>
         <form id="searchResults" hidden>
           <div class="modal-body form-group">
-            <input name="subject" type="text" placeholder="subject">
+            <input name="subject" type="text" placeholder="subject">  <input name="id" type="text" placeholder="enter confirmed id">
           <textarea id="maintMessage2" name="description" class="form-control" placeholder="Enter a detailed description of the issue. If possible, upload a photo. Please allow 1 business day for a response." rows="4" required="required" data-error="Please, leave us a message."></textarea>
 
               <div class="col-md-6">
@@ -408,8 +409,9 @@
                 </div>
           </div>
 
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Edit</button>
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="editTix">Edit</button>
         </form>
+        <p id="editUiMsg"></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -16,4 +16,5 @@ $(() => {
   // $('#showTix').on('click', events.onShowMaintTix)
   $('#delTixFormSearch').on('submit', events.onDelSearch)
   $('#showEditTixForm').on('submit', events.onShowEdit)
+  $('#searchResults').on('submit', events.onEdit)
 })

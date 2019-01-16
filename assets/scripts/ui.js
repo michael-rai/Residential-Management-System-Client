@@ -107,11 +107,22 @@ const delMaintTixFailure = data => {
 // show edit success and failures
 const showEditSuccess = data => {
   document.getElementById('searchResults').hidden = false
+  $('#searchMsg').text('Ticket exists, please edit below:')
   console.log(data)
 }
 
 const showEditFailure = error => {
   console.log(error)
+}
+
+const editTixSuccess = data => {
+  $('#editUiMsg').text('You have successfully edited the maintenance ticket above.')
+  console.log('got to edit maint success')
+}
+
+const editTixFailure = data => {
+  $('#editUiMsg').text('You have not edited the maintenance ticket above.')
+  console.log('got to edit maint failure')
 }
 
 module.exports = {
@@ -129,5 +140,7 @@ module.exports = {
   delMaintTixSuccess,
   delMaintTixFailure,
   showEditSuccess,
-  showEditFailure
+  showEditFailure,
+  editTixFailure,
+  editTixSuccess
 }

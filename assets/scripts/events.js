@@ -57,11 +57,12 @@ const onShowMaintTix = event => {
     .catch(ui.showMaintTixFailure)
 }
 
-const onDelMaintTix = event => {
+const onEdit = event => {
   event.preventDefault()
-  api.delMaintTix()
-    .then(ui.delMaintTixSuccess)
-    .catch(ui.delMaintTixFailure)
+  const data = getFormFields(event.target)
+  api.edit(data)
+    .then(ui.editTixSuccess)
+    .catch(ui.editTixFailure)
 }
 
 const onDelSearch = event => {
@@ -89,7 +90,7 @@ module.exports = {
   onSendMaintTix,
   onViewMaintTix,
   onShowMaintTix,
-  onDelMaintTix,
+  onEdit,
   onDelSearch,
   onShowEdit
 }
