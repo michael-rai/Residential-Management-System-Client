@@ -43,9 +43,26 @@ const onSendMaintTix = event => {
 
 const onViewMaintTix = event => {
   event.preventDefault()
+  document.getElementById('ticketIndexContainer').hidden = false
   api.viewMaintTix()
     .then(ui.viewMaintTixSuccess)
     .catch(ui.viewMaintTixFailure)
+}
+
+const onShowMaintTix = event => {
+  event.preventDefault()
+  document.getElementById('ticketShowContainer').hidden = false
+  api.showMaintTix()
+    .then(ui.showMaintTixSuccess)
+    .catch(ui.showMaintTixFailure)
+}
+
+const onDelMaintTix = event => {
+  event.preventDefault()
+  document.getElementById('ticketDeleteContainer').hidden = false
+  api.delMaintTix()
+    .then(ui.delMaintTixSuccess)
+    .catch(ui.delMaintTixFailure)
 }
 
 module.exports = {
@@ -54,5 +71,7 @@ module.exports = {
   onSignOut,
   onPwChange,
   onSendMaintTix,
-  onViewMaintTix
+  onViewMaintTix,
+  onShowMaintTix,
+  onDelMaintTix
 }

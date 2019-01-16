@@ -348,7 +348,13 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="container">
+        <button class="btn btn-secondary" type="button" id="launchTixIndex">Show All Tickets</button>
+        <button class="btn btn-secondary" type="button" id="launchTixShow">Find One Ticket</button>
+        <button class="btn btn-secondary" type="button" id="launchTixDelete">Delete A Ticket</button>
+        <div class="container" id="ticketShowContainer" hidden>
+          Ticket Show Test
+        </div>
+        <div class="container" id="ticketIndexContainer" hidden>
           <div class="row">
             <div class="col">Tickets</div>
             <div class="col">Resolved?</div>
@@ -356,6 +362,9 @@
             <div class="col" id="ticketIndexResponse"></div>
             <div class="col" id="ticketResolvedResponse"></div>
           </div>
+        </div>
+        <div class="container" id="ticketDeleteContainer" hidden>
+          Delete Test
         </div>
       </div>
       <div class="modal-footer">

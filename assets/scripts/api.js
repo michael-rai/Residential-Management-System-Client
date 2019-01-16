@@ -54,11 +54,20 @@ const viewMaintTix = data => {
   })
 }
 
+const showMaintTix = data => {
+  return $.ajax({
+    url: config.apiUrl + '/tickets/:id',
+    method: 'GET',
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   pwChange,
   viewMaintTix,
-  maintTix
+  maintTix,
+  showMaintTix
 }
