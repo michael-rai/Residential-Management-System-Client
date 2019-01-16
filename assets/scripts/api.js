@@ -56,7 +56,7 @@ const viewMaintTix = data => {
 
 const showMaintTix = data => {
   return $.ajax({
-    url: config.apiUrl + '/tickets/:id',
+    url: config.apiUrl + `/tickets/${data.id}`,
     method: 'GET',
     data
   })
@@ -70,6 +70,14 @@ const showEdit = data => {
   })
 }
 
+const delMaintTix = data => {
+  return $.ajax({
+    url: config.apiUrl + `/tickets/${data.id}`,
+    method: 'DELETE',
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -78,5 +86,6 @@ module.exports = {
   viewMaintTix,
   maintTix,
   showMaintTix,
-  showEdit
+  showEdit,
+  delMaintTix
 }

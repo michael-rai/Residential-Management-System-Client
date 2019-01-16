@@ -94,11 +94,13 @@ const showMaintTixFailure = data => {
 }
 
 // delete main tix sucess and failures
-const delMaintTixSucess = data => {
+const delMaintTixSuccess = data => {
+  $('#delResult').text('You have successfully deleted the maintenance ticket above.')
   console.log('got to del maint success')
 }
 
 const delMaintTixFailure = data => {
+  $('#delResult').text('You have not deleted the maintenance ticket above')
   console.log('got to del maint failure')
 }
 
@@ -124,7 +126,7 @@ module.exports = {
   viewMaintTixSuccess,
   showMaintTixSucess,
   showMaintTixFailure,
-  delMaintTixSucess,
+  delMaintTixSuccess,
   delMaintTixFailure,
   showEditSuccess,
   showEditFailure

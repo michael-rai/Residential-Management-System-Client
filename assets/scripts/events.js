@@ -66,8 +66,8 @@ const onDelMaintTix = event => {
 
 const onDelSearch = event => {
   event.preventDefault()
-  document.getElementById('delSearchContainer').hidden = false
-  api.delMaintTix()
+  const data = getFormFields(event.target)
+  api.delMaintTix(data)
     .then(ui.delMaintTixSuccess)
     .catch(ui.delMaintTixFailure)
 }
