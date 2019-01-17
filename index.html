@@ -356,36 +356,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <table class="table-responsive">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Subject</th>
-              <th scope="col">Description</th>
-              <th scope="col">Resolved?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="container" id="ticketIndexContainer">
+          <div class="row">
+            <div class="col">Ticket ID</div>
+            <div class="col">Subject</div>
+            <div class="col">Description</div>
+            <div class="col">Resolved?</div>
+            <div class="w-100"></div>
+            <div class="col" id="ticketIndexIdResponse"></div>
+            <div class="col" id="ticketIndexSubResponse"></div>
+            <div class="col" id="ticketIndexDesResponse"></div>
+            <div class="col" id="ticketResolvedResponse"></div>
+          </div>
         </div>
       </div>
       <div class="modal-footer">

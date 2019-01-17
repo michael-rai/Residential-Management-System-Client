@@ -77,19 +77,20 @@ const viewMaintTixSuccess = data => {
   let des = ''
   let res = ''
   data.tickets.map(ticket => {
-    `<th scope="row">${ticket.id}</th>
-    <td>${ticket.subject}</td>
-    <td>${ticket.description}</td>
-    <td>${ticket.resolved}</td>`
+    // tr += `<tr>`;
+    // `<th scope="row">${ticket.id}</th>
+    // <td>${ticket.subject}</td>
+    // <td>${ticket.description}</td>
+    // <td>${ticket.resolved}</td>`
 
-    // id += `<div class=${ticket.id}>${ticket.id}</div>`
-    // // id += `<div>`
-    // sub += `<div class=${ticket.subject}>${ticket.subject}</div>`
-    // // sub += `<div>`
-    // des += `<div class=${ticket.description}>${ticket.description}</div>`
-    // // des += `<div>`
-    // res += `<div class=${ticket.resolved}>${ticket.resolved}</div>`
-    // // res += `<div>`
+    id += `<div class=${ticket.id}>${ticket.id}</div>`
+    // id += `<div>`
+    sub += `<div class=${ticket.subject}>${ticket.subject}</div>`
+    // sub += `<div>`
+    des += `<div class=${ticket.description}>${ticket.description}</div>`
+    // des += `<div>`
+    res += `<div class=${ticket.resolved}>${ticket.resolved}</div>`
+    // res += `<div>`
     $('#ticketIndexIdResponse').html(id)
     $('#ticketIndexSubResponse').html(sub)
     $('#ticketIndexDesResponse').html(des)
