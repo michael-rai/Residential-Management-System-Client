@@ -3,9 +3,12 @@ const store = require('./store.js')
 // Sign up sucess and failures
 const signUpSuccess = data => {
   console.log('registration success')
-  $('#reg-sucess').text('Signed up successfully. You may now  sign-in.')
+  document.getElementById('regCloseBtnShow').hidden = false
+  document.getElementById('regisForm').hidden = true
+  $('#reg-success').text('Signed up successfully. You may now  sign-in.')
   $('#message1').removeClass()
   $('#message1').addClass('success')
+  $('#regisForm').trigger('reset')
 }
 
 const signUpFailure = data => {
@@ -29,6 +32,7 @@ const signInSuccess = data => {
   $('#alert1').fadeOut(5000)
   $('#message1').removeClass()
   $('#message1').addClass('success')
+  $('#signInForm').trigger('reset')
 }
 
 const signInFailure = data => {
@@ -44,9 +48,9 @@ const signOutSuccess = data => {
   document.getElementById('main-view').hidden = true
   document.getElementById('prelogMsg').hidden = false
   document.getElementById('regSignButtons').hidden = false
-  $('#alert1').fadeIn(500)
-  $('#alert1').text('Signed out successfully')
-  $('#alert1').fadeOut(5000)
+  $('#alert2').fadeIn(500)
+  $('#alert2').text('Signed out successfully')
+  $('#alert2').fadeOut(5000)
   store.user = null
   console.log('signed out successfully')
 }
@@ -61,13 +65,15 @@ const signOutFailure = (error) => {
 
 // pw change success and failures
 const pwChgSuccess = data => {
-  console.log('pw change success')
+  $('#pwChg-success').fadeIn(500)
   $('#pwChg-success').text('You have successfully changed your password.')
+  $('#pwChg-success').fadeOut(5000)
+  $('#pwChgForm').trigger('reset')
 }
 
-const pwChgFailure = error => {
-  console.log('pw change failure', error)
+const pwChgFailure = () => {
   $('#pwChg-success').text('You are unable to change your password. Please contact Administrator.')
+  $('#pwChgForm').trigger('reset')
 }
 
 // view maintenance index tix success and failures
@@ -105,6 +111,16 @@ const viewMaintTixSuccess = data => {
 
 // show maint tix success and failures
 
+const maintTixSuccess = data => {
+  $('#sendMaintTix').trigger('reset')
+  $('#alert3').text('You have successfully created a maintenance ticket')
+  $('#alert3').fadeOut(6000)
+}
+
+const maintTixFailure = data => {
+  console.log('got to show maint failure')
+}
+
 const showMaintTixSucess = data => {
   console.log('got to show maint success')
 }
@@ -115,13 +131,15 @@ const showMaintTixFailure = data => {
 
 // delete main tix sucess and failures
 const delMaintTixSuccess = data => {
+  $('#delResult').fadeIn(500)
   $('#delResult').text('You have successfully deleted the maintenance ticket above.')
-  console.log('got to del maint success')
+  $('#delResult').fadeOut(5000)
 }
 
 const delMaintTixFailure = data => {
+  $('#delResult').fadeIn(500)
   $('#delResult').text('You have not deleted the maintenance ticket above')
-  console.log('got to del maint failure')
+  $('#delResult').fadeOut(5000)
 }
 
 // show edit success and failures
@@ -162,5 +180,7 @@ module.exports = {
   showEditSuccess,
   showEditFailure,
   editTixFailure,
-  editTixSuccess
+  editTixSuccess,
+  maintTixSuccess,
+  maintTixFailure
 }
