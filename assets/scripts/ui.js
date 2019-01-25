@@ -21,6 +21,8 @@ const signUpFailure = data => {
 // sign in success and failures
 const signInSuccess = data => {
   store.user = data.user
+  $('#signin-success').text('Connecting to server...')
+  $('#signin-success').text('Signed In Successfully')
   document.getElementById('main-nav').hidden = false
   document.getElementById('ticker').hidden = false
   document.getElementById('main-view').hidden = false
@@ -29,7 +31,8 @@ const signInSuccess = data => {
   $('#signInModal').modal('toggle')
   $('#alert1').fadeIn(500)
   console.log('sign-in success')
-  $('#alert1').text('Signed In Successfully')
+  $('#signin-success').text('Connecting to server...')
+  $('#signin-success').text('Signed In Successfully')
   $('#alert1').fadeOut(5000)
   $('#message1').removeClass()
   $('#message1').addClass('success')

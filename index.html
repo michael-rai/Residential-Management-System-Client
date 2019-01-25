@@ -243,10 +243,19 @@
 
 
 <!-- Main View -->
-<div id='main-view' class="list-group" hidden>
-  <a href="#" class="list-group-item list-group-item-action center">
+<div id='main-view' class="container row" hidden>
+  <div class="col">
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/KiuwzegZG-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="card-body">
+        <p class="card-text">Check out this cool video on how to recycle!</p>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <a href="#" class="list-group-item list-group-item-action text-center">
     Make Rental or Mortgage Payment
-    <div id='stripe-payt-view'>
+    <div id='stripe-payt-view' class="text-center">
       <form action="your-server-side-code" method="POST">
                           <script
                           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -262,7 +271,8 @@
   </a>
   <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#maintModal">Issue Maintenance Request</button>
   <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#mailModal">View Package Holds</button>
-  <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#msgModal">Send Message to Management</button
+  <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#msgModal">Send Message to Management</button>
+</div>
 </div>
 
 <!-- Maintenance Request Modal -->
