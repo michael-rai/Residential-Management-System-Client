@@ -22,6 +22,7 @@ const signUpFailure = data => {
 const signInSuccess = data => {
   store.user = data.user
   document.getElementById('main-nav').hidden = false
+  document.getElementById('ticker').hidden = false
   document.getElementById('main-view').hidden = false
   document.getElementById('prelogMsg').hidden = true
   document.getElementById('regSignButtons').hidden = true

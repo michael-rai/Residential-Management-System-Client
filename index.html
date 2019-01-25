@@ -54,10 +54,10 @@
           <h1 class="display-4">Welcome to The Residential Management System</h1>
           <p id="prelogMsg"class="lead">Once logged in, as a member of your residential community, you can submit maintence tickets and make payments.</p>
           <div id="regSignButtons"class='position-relative'>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#regModal">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#regModal">
               Register
             </button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#signInModal">
               Sign In
             </button>
           </div>
@@ -66,6 +66,10 @@
       </div>
       <div class="alert alert-light text-center" role="alert" id="alert2"></div>
 
+      <div class="marquee-container text-center">
+        <marquee class='marquee' behavior="scroll" direction="left" id="ticker" hidden>Please remember to check your package holds. Management cannot be held responsible for your items. All dogs must be kept on-leash if outside designated area.</marquee>
+      </div>
+      <hr>
 <!-- Register  -->
 
  <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -169,14 +173,14 @@
           <div class="form-group">
             <div class="form-check">
           </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-light">Register</button>
           </div>
           </form>
       </div>
       <p id="reg-success" class=></p>
-      <button id="regCloseBtnShow" type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" hidden>Close</button>
+      <button id="regCloseBtnShow" type="button" class="btn btn-light" data-dismiss="modal" aria-label="Close" hidden>Close</button>
       <div class="modal-footer">
-        Version 1.0
+        Version 2.0
       </div>
     </div>
   </div>
@@ -197,12 +201,12 @@
         <form id="signInForm">
           <input Name="credentials[email]" type="text" placeholder="Enter E-mail">
           <input Name="credentials[password]" type="password" placeholder="Enter Password">
-          <button type="submit" class="btn btn-primary">Sign-In</button>
+          <button type="submit" class="btn btn-light">Sign-In</button>
         </form>
       </div>
       <div class="modal-footer">
         <p id="signin-success"></p>
-        Version 1.0
+        Version 2.0
       </div>
     </div>
   </div>
@@ -223,7 +227,7 @@
         <form id="pwChgForm">
           <input Name="passwords[old]" type="password" placeholder="Enter Old Password">
           <input Name="passwords[new]" type="password" placeholder="Enter New Password">
-          <button type="submit" class="btn btn-primary">Change Password</button>
+          <button type="submit" class="btn btn-light">Change Password</button>
         </form>
       </div>
       <div class="modal-footer">
@@ -455,4 +459,9 @@
 
 
     </body>
+    <footer class="bg-black small text-center text-black-50">
+      <div class="container">
+        Copyright &copy; Michael Rai 2019
+      </div>
+    </footer>
 </html>
