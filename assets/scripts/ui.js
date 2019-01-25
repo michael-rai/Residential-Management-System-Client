@@ -2,7 +2,6 @@ const store = require('./store.js')
 
 // Sign up sucess and failures
 const signUpSuccess = data => {
-  console.log('registration success')
   document.getElementById('regCloseBtnShow').hidden = false
   document.getElementById('regisForm').hidden = true
   $('#reg-success').text('Signed up successfully. You may now  sign-in.')
@@ -12,7 +11,6 @@ const signUpSuccess = data => {
 }
 
 const signUpFailure = data => {
-  console.log('registration failure')
   $('#reg-sucess').text('You are unable to register. Please contact Administrator.')
   $('#message1').removeClass()
   $('#message1').addClass('failure')
@@ -30,7 +28,6 @@ const signInSuccess = data => {
   document.getElementById('regSignButtons').hidden = true
   $('#signInModal').modal('toggle')
   $('#alert1').fadeIn(500)
-  console.log('sign-in success')
   $('#signin-success').text('Connecting to server...')
   $('#alert1').text('Signed In Successfully')
   $('#alert1').fadeOut(5000)
@@ -41,7 +38,6 @@ const signInSuccess = data => {
 
 const signInFailure = data => {
   $('#signin-success').text('You are unable to sign in. Please check your credentials and try again.')
-  console.log('sign-in failure')
   // $('#reg-sucess').text('You are unable to register. Please contact Administrator.')
   // $('#message1').removeClass()
   // $('#message1').addClass('failure')
@@ -58,15 +54,13 @@ const signOutSuccess = data => {
   $('#alert2').text('Signed out successfully')
   $('#alert2').fadeOut(5000)
   store.user = null
-  console.log('signed out successfully')
 }
 
-const signOutFailure = (error) => {
+const signOutFailure = () => {
   $('#alert1').text('Error on sign out')
   $('#alert1').fadeOut(5000)
   // $('#message').removeClass()
   // $('#message').addClass('failure')
-  console.log('signOutFailure ran. Error is :', error)
 }
 
 // pw change success and failures
@@ -123,17 +117,17 @@ const maintTixSuccess = data => {
   $('#alert3').fadeOut(6000)
 }
 
-const maintTixFailure = data => {
-  console.log('got to show maint failure')
-}
-
-const showMaintTixSucess = data => {
-  console.log('got to show maint success')
-}
-
-const showMaintTixFailure = data => {
-  console.log('got to show maint failure')
-}
+// const maintTixFailure = data => {
+//   console.log('got to show maint failure')
+// }
+//
+// const showMaintTixSucess = data => {
+//   console.log('got to show maint success')
+// }
+//
+// const showMaintTixFailure = data => {
+//   console.log('got to show maint failure')
+// }
 
 // delete main tix sucess and failures
 const delMaintTixSuccess = data => {

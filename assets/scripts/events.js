@@ -17,6 +17,9 @@ const onSignIn = event => {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
+  api.getWeather()
+    .then(ui.getWeatherSuccess)
+    .catch(ui.getWeatherFailure)
 }
 
 const onSignOut = event => {
@@ -77,7 +80,6 @@ const onDelSearch = event => {
 const onShowEdit = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.showEdit(data)
     .then(ui.showEditSuccess)
     .catch(ui.showEditFailure)
