@@ -173,14 +173,11 @@ module.exports = {
   pwChgSuccess,
   pwChgFailure,
   viewMaintTixSuccess,
-  showMaintTixSucess,
-  showMaintTixFailure,
   delMaintTixSuccess,
   delMaintTixFailure,
   showEditSuccess,
   showEditFailure,
   editTixFailure,
   editTixSuccess,
-  maintTixSuccess,
-  maintTixFailure
+  maintTixSuccess
 }
