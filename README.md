@@ -1,6 +1,6 @@
 --DESCRIPTION:
 
-[Imgur](https://i.imgur.com/18Mlflk.png)
+![Imgur](https://i.imgur.com/18Mlflk.png)
 
 
 This repository is the front end to single page web appliction called The Residential Management System, built by Michael Rai. The user (resident) is able to register, log in and send maintenance request (labeled tickets) to property management. Some features include being able to see all tickets, find and update a ticket, and delete a ticket.
