@@ -53,6 +53,7 @@ const signOutSuccess = data => {
   $('#alert2').fadeIn(500)
   $('#alert2').text('Signed out successfully')
   $('#alert2').fadeOut(5000)
+  $('#regisForm').trigger('reset')
   store.user = null
 }
 
@@ -73,7 +74,7 @@ const pwChgSuccess = data => {
 
 const pwChgFailure = () => {
   $('#pwChg-success').text('You are unable to change your password. Please contact Administrator.')
-  $('#pwChgForm').trigger('reset')
+  $('.form').trigger('reset')
 }
 
 // view maintenance index tix success and failures
@@ -132,7 +133,7 @@ const maintTixSuccess = data => {
 // delete main tix sucess and failures
 const delMaintTixSuccess = data => {
   $('#delResult').fadeIn(500)
-  $('#delResult').text('You have successfully deleted the maintenance ticket above.')
+  $('#delResult').text('You have successfully deleted the maintenance ticket above. Changes will reflect on your next sign-in.')
   $('#delResult').fadeOut(5000)
 }
 
