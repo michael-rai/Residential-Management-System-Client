@@ -15,7 +15,7 @@
     </head>
     <body>
       <!--nav bar  -->
-      <nav id='main-nav' class="navbar navbar-expand-lg navbar-light bg-light" hidden>
+      <nav id='main-nav' class="navbar navbar-expand-lg navbar-light bg-secondary" hidden>
         <a class="navbar-brand" href="#"><i class="fas fa-globe-americas"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
             </li>
             <li class="nav-item">
               <div class="dropdown show">
-                <a class="btn btn-light dropdown toggle" href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-receipt"></i>View Maintenance Tickets</a>
+                <a class="btn btn-secondary dropdown toggle" href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-receipt"></i>View Maintenance Tickets</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <a class="dropdown-item" href="#" data-toggle="modal" id="viewMainTix" data-target="#viewTixModal">Show All Tickets</a>
                   <a class="dropdown-item" href="#" data-toggle="modal" id="showTix" data-target="#showTixModal">Show/Edit A Ticket</a>
@@ -43,16 +43,12 @@
             </li>
           </ul>
 
-    <span class="navbar-text">
-      <div class="alert alert-light" role="alert" id="alert1"></div>
-    </span>
   </div>
 </nav>
 <!-- Jumbotron -->
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Welcome to The Residential Management System</h1>
-          <p id="prelogMsg"class="lead">Once logged in, as a member of your residential community, you can submit maintence tickets and make payments.</p>
           <div id="regSignButtons"class='position-relative'>
             <button type="button" class="btn btn-light" data-toggle="modal" data-target="#regModal">
               Register
@@ -64,7 +60,9 @@
 
         </div>
       </div>
+      <p id="prelogMsg"class="lead text-center">Once logged in, as a member of your residential community, you can submit maintence tickets and make payments.</p>
       <div class="alert alert-light text-center" role="alert" id="alert2"></div>
+        <div class="alert alert-light text-center" role="alert" id="alert1"></div>
 
       <div class="marquee-container text-center">
         <marquee class='marquee' behavior="scroll" direction="left" id="ticker" hidden>Please remember to check your package holds. Management cannot be held responsible for your items. All dogs must be kept on-leash if outside designated area.</marquee>
@@ -177,7 +175,9 @@
           </div>
           </form>
       </div>
+      <div>
       <p id="reg-success" class=></p>
+    </div>
       <button id="regCloseBtnShow" type="button" class="btn btn-light" data-dismiss="modal" aria-label="Close" hidden>Close</button>
       <div class="modal-footer">
         Version 2.0
@@ -203,9 +203,12 @@
           <input Name="credentials[password]" type="password" placeholder="Enter Password">
           <button type="submit" class="btn btn-light">Sign-In</button>
         </form>
+        <div>
+        <p id="signin-success" class=></p>
+      </div>
       </div>
       <div class="modal-footer">
-        <p id="signin-success"></p>
+
         Version 2.0
       </div>
     </div>
@@ -216,7 +219,7 @@
 
 <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -278,7 +281,7 @@
 <!-- Maintenance Request Modal -->
 <div class="modal fade" id="maintModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <form id="sendMaintTix">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Maintenance Request</h5>
@@ -317,7 +320,7 @@
 <!-- View Package Holds Modal -->
 <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">View Package Holds</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -337,7 +340,7 @@
 <!-- Send Message to Mgt Modal -->
 <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <form id="sendMsgToMgmt">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Send Message to Management</h5>
@@ -364,7 +367,7 @@
 
 <div class="modal fade" id="viewTixModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">View All Maintenance Tickets</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -396,7 +399,7 @@
 <!-- Show/Edit Maintenance Ticekt  -->
 <div class="modal fade" id="showTixModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Find and/or Edit a Maintenance Ticket</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -444,7 +447,7 @@
 <!-- Delete A Maintenance Ticket -->
 <div class="modal fade" id="delTixModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Delete A Maintenance Request</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

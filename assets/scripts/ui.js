@@ -32,7 +32,7 @@ const signInSuccess = data => {
   $('#alert1').fadeIn(500)
   console.log('sign-in success')
   $('#signin-success').text('Connecting to server...')
-  $('#signin-success').text('Signed In Successfully')
+  $('#alert1').text('Signed In Successfully')
   $('#alert1').fadeOut(5000)
   $('#message1').removeClass()
   $('#message1').addClass('success')
@@ -40,6 +40,7 @@ const signInSuccess = data => {
 }
 
 const signInFailure = data => {
+  $('#signin-success').text('You are unable to sign in. Please check your credentials and try again.')
   console.log('sign-in failure')
   // $('#reg-sucess').text('You are unable to register. Please contact Administrator.')
   // $('#message1').removeClass()
@@ -52,6 +53,7 @@ const signOutSuccess = data => {
   document.getElementById('main-view').hidden = true
   document.getElementById('prelogMsg').hidden = false
   document.getElementById('regSignButtons').hidden = false
+  document.getElementById('ticker').hidden = true
   $('#alert2').fadeIn(500)
   $('#alert2').text('Signed out successfully')
   $('#alert2').fadeOut(5000)

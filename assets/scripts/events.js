@@ -12,6 +12,7 @@ const onRegister = event => {
 
 const onSignIn = event => {
   event.preventDefault()
+  $('#signin-success').text('Connecting to server...')
   const data = getFormFields(event.target)
   api.signIn(data)
     .then(ui.signInSuccess)
