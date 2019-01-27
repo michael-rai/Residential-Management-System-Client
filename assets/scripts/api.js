@@ -17,6 +17,13 @@ const signIn = data => {
   })
 }
 
+const getWeather = () => {
+  return $.ajax({
+    url: config.apiWeatherUrl,
+    method: 'GET'
+  })
+}
+
 const signOut = () => {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
@@ -96,5 +103,6 @@ module.exports = {
   showMaintTix,
   showEdit,
   delMaintTix,
-  edit
+  edit,
+  getWeather
 }

@@ -35,6 +35,21 @@ const signInSuccess = data => {
   $('#message1').addClass('success')
   $('#signInForm').trigger('reset')
 }
+const getWeatherFailure = error => {
+  $('#weather').text(error)
+}
+
+const getWeatherSuccess = data => {
+  let description = ''
+  let temp = ''
+  data.weather.map(main => {
+    description = `${main.description}`
+    temp = `${main.temp}`
+  })
+  $('#temp').html(temp)
+  $('#description').html(description)
+  console.log(data)
+}
 
 const signInFailure = data => {
   $('#signin-success').text('You are unable to sign in. Please check your credentials and try again.')
@@ -180,5 +195,7 @@ module.exports = {
   showEditFailure,
   editTixFailure,
   editTixSuccess,
-  maintTixSuccess
+  maintTixSuccess,
+  getWeatherSuccess,
+  getWeatherFailure
 }
